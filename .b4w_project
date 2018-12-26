@@ -1,0 +1,28 @@
+[info]
+author = 
+icon = 
+name = ring-builder
+title = ring builder
+
+[paths]
+assets_dirs = projects/ring-builder/assets;
+blend_dirs = projects/ring-builder/blender;
+blender_exec = /Applications/blender.app/Contents/MacOS/blender
+build_dir = projects/ring-builder/build
+deploy_dir = 
+
+[compile]
+apps = 
+css_ignore = 
+engine_type = compile
+ignore = 
+js_ignore = 
+optimization = simple
+use_physics = True
+
+[deploy]
+assets_path_dest = assets
+assets_path_prefix = assets
+ignore = 
+override = 
+

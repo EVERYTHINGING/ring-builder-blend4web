@@ -26,7 +26,7 @@ var APP_ASSETS_PATH = m_cfg.get_assets_path("ring-builder");
  */
 exports.init = function() {
     m_app.init({
-        canvas_container_id: "main_canvas_container",
+        canvas_container_id: "blend4web-container",
         callback: init_cb,
         show_fps: DEBUG,
         console_verbose: DEBUG,
@@ -81,18 +81,18 @@ var current = { band: { id: null, name: null }, diamond: { id: null, name: null 
 var LAST_LOADED_TYPE = "";
 
 function load_cb(data_id, success) {
-    if(LAST_LOADED_TYPE){ current[LAST_LOADED_TYPE].id = data_id; }
-
     if (!success) {
         console.log("b4w load failure");
         return;
     }
 
-    if(LAST_LOADED_TYPE === "diamond"){
+    if(LAST_LOADED_TYPE){ current[LAST_LOADED_TYPE].id = data_id; }
+
+    if(current.diamond.id){
         var diamond = m_scene.get_object_by_name("Diamond", current.diamond.id);
         var diamondLocation = m_scene.get_object_by_name("DiamondLocation", current.band.id);
         var pos = new Float32Array(3);
-        var trans = m_trans.get_translation(diamondLocation, pos);
+        m_trans.get_translation(diamondLocation, pos);
         m_trans.set_translation_v(diamond, pos);
     }
 

@@ -1,0 +1,45 @@
+#Options {
+	width: 80%;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	text-align: left;
+	padding-left: 20px;
+}
+
+input[type="radio"] {
+	margin-right: 20px;
+}
+
+fieldset {
+	display: none;
+}
+
+fieldset.open {
+	display: block;
+}
+
+legend {
+	display: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	display: inline-block;
+}
+
+button {
+	outline: 0;
+}
+
+button.open {
+	background: #fff;
+	border: 0;
+}
